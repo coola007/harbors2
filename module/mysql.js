@@ -21,15 +21,14 @@ function connect () {
     });
     db.connect();
     db.on('error', handleError);
-    db.query('use itharbors');
+    //db.query('use test');
+    //db.query('select * from users',function(err,res,fil){
+    //    console.log(res)
+    //})
 }
 
 connect();
 
-//db.query('use itharbors');
-//db.query('select * from users',function(err,res,fil){
-//    harbors.log(res);
-//})
 module.exports = function(query,callback){
     db.query(query,function(error, results, fields){
         typeof(callback)=='function'&&callback(error, results, fields);
