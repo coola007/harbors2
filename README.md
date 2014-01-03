@@ -58,11 +58,9 @@ session不再依赖redis，改为文件形式，也许有设计不好的地方�
   >
   >**app.post(name,value)**
   >
-  >用户post参数：
+  >  app.post() => {Name:Value}//取所有的post参数
   >
-  >  app.post() => {Name:Value}//取所有的post值
-  >
-  >  app.post(Name) => Value//取单个post值
+  >  app.post(Name) => Value//取单个post参数
   >
   >**app.cookie(name,value,setting)**
   >
@@ -70,5 +68,24 @@ session不再依赖redis，改为文件形式，也许有设计不好的地方�
   >**app.session(name,value,setting)**
   >
   >
-  >**app.path**
+  >**app.route()**
   >
+  >  app.route()=>输出所有路由节点  (/home/index_.js=>[home,index_.js])
+  >
+  >  app.route(0)=>第一个路由节点  (/home/index_.js=>home)
+  >
+  >**app.display(path)**
+  >
+  >  返回一个静态文件。path为设置的服务器根目录，或者绝对地址。
+  >
+  >**app.send(string)**
+  >
+  >  返回一个字符串给客户端。
+  >
+  >**app.notFound()**
+  >
+  >  返回一个404页面给客户端。
+  >
+  >**app.error()**
+  >
+  >  返回一个500错误给客户端。
