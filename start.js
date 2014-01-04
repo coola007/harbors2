@@ -1,5 +1,5 @@
 var path = require('path');
-var harbors = require('harbors2');
+var harbors = require('harbors');
 
 harbors.config('./config/server.ini');
 harbors.config('./config/vhost.ini');
